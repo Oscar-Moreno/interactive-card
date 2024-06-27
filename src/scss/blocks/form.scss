@@ -1,0 +1,60 @@
+@use '../mixins/responsive.scss' as *;
+.container-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include responsive (desktop){
+        position: absolute;
+        top: 275px;
+        left: 832px;
+    }
+}
+.form{
+flex-direction: column;
+display: flex;
+gap: 30px;
+width: 327px;
+height: 328px;
+input{
+    width: 327px;
+    height: 45px;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    .form-date{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+            input{
+             width: 72px;
+            }
+        }
+    .form-cvc{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input{
+            width: 164px;
+        }
+    }
+}
+.text-error{
+    color: red;
+    display: none;
+}
+
+.send-form{
+    background-color: #21092F;
+    color: white;
+}
+
+}

@@ -11,39 +11,56 @@
   <body class="body">
     <main class="main">
 
-      <div class="bg-top">
+      <div class="cards">
         <div class="card-1">
-          <img src="assets/images/bg-card-front.png" alt="">
-        </div>
-        <div class="card-2">
           <img src="assets/images/bg-card-back.png" alt="">
         </div>
-      </div>
-
+        <div class="card-2">
+          <img src="assets/images/bg-card-front.png" alt="">
+        </div>
+        <div class="card-logo">
+          <img src="assets/images/card-logo.svg" alt="">
+        </div>
+        <span class="card-number" id="card-number">0000 0000 0000 0000</span>
+        <span class="card-name" id="card-name">JANE APLESSED</span>
+        <span class="card-date" id="card-date">00/00</span>
+        <span class="card-cvc" id="card-cvc">000</span>
+      
+      </div> 
+      <div class="container-form">
       <form class="form">
         <div class="form-container">
           <label for="name"> CARDHOLDER NAME</label>
-          <input type="text" id="name">
+          <input class="input  " type="text" id="name" placeholder="e.g. Jane Appleseed">
+          <span class="text-error">Cant´t be blank</span>
         </div>
         <div class="form-container">
-          <label for="number"> CARDHOLDER NAME</label>
-          <input type="text" id="number">
+          <label for="number"> CARD NUMBERS</label>
+          <input class="input" type="text" id="number" placeholder="e.g. 1234 5678 9123 0000">
+          <span class="text-error">Cant´t be blank</span>
         </div>
         
         <div class="form-container form-bottom">
+          
           <div class="form-date">
-            <label for="">EXP. DATE (MM/YY)</label>
-            <input type="text">
+            <label for="month">EXP. DATE (MM/YY)</label>
+            <div>
+              <input class="input" type="text" placeholder="MM" id="month" >
+              <input class="input" type="text" placeholder="YY" id="year">
+            </div>
+            <span class="text-error">Cant´t be blank</span>
           </div>
           <div class="form-cvc">
-            <input type="text">
+            <label for="cvc">CVC</label>
+            <input class="input" type="text" id="cvc" placeholder="e.g.123">
+            <span class="text-error">Cant´t be blank</span>
           </div>
         </div>
         <div class="form-container">
-          <input type="submit" value="Send">
+          <input  class="send-form" type="submit" value="Confirm">
         </div>
-        
       </form>
+    </div>
     </main>
     <script type="module" src="./js/index.js"></script>
   </body>
